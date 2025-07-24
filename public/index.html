@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Score</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="controls">
+    <button onclick="triggerBuild()">Run Jenkins Job</button>
+    <button onclick="downloadCSV()">Download CSV</button>
+  </div>
+
+  <div class="percentage" id="score-percentage"></div>
+
+  <table id="process-table">
+    <thead id="table-head"></thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+<script >
+	fetch('http://localhost:8081/getinfo',{
+		method: 'GET'
+	})
+</script>
+</body>
+</html>
